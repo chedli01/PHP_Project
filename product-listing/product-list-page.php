@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    <?php 
+    include "product-search-bar.php";
+    include "product-filtering.php";
+    include "product-list.php";
+
+    ?>
+
+    button
 </body>
 </html>
