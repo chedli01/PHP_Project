@@ -9,3 +9,4 @@
         <p class="product-price"><?php echo $product['productPrice']; ?></p>
     </div>
 </div>
+

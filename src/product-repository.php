@@ -1,9 +1,4 @@
 <?php
-
-// productrepository.php
-
-
-
 class ProductRepository {
     private $conn;
 

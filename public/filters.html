@@ -1,0 +1,20 @@
+<div class="filter-container">
+    <h3>Filters</h3>
+    <div>
+        <label for="priceRange">Price Range:</label>
+        <input type="range" id="minPrice" min="0" max="1000" step="10">
+        <input type="range" id="maxPrice" min="0" max="1000" step="10">
+        <span id="priceValue">0 - 1000</span>
+    </div>
+    <div>
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="All">All</option>
+            <option value="computer">Computer</option>
+            <option value="phone">Phone</option>
+        </select>
+    </div>
+
+    <button id="clearFilters">Clear Filters</button>
+</div>
+<button id="applyFilters">Apply Filters</button>
