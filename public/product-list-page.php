@@ -1,10 +1,11 @@
 <?php
 // Start the session
 session_start();
-
 // Include necessary files
 include '../db/db-config.php';
 include '../src/product-repository.php';
+
+
 
 // Check if products are already fetched and stored in the session
 if (!isset($_SESSION['products'])) {
@@ -14,13 +15,13 @@ if (!isset($_SESSION['products'])) {
     // Fetch all products from the database
     $products = $productRepository->getAllProducts();
 
+
     // Store fetched products in the session
     $_SESSION['products'] = $products;
 } else {
     // Retrieve products from the session
     $products = $_SESSION['products'];
 }
-
 
 if(isset($_GET['query'])) {
     // Sanitize and store the search query
@@ -86,17 +87,29 @@ if (isset($_COOKIE['priceRange']) && $_COOKIE['priceRange'] != '0,0' ) {
     </form>
 </div>
 
-<?php include "filters.html"; ?>
+<?php include "filters.html";
+include "../src/pagination-util.php";
+include_once '../src/pagination-config.php';
+ ?>
+
+<div class="pagination-links">
+    <?php echo generatePaginationLinks($totalPages); ?>
+</div>
 
 <?php
 // Include the product item template and loop through fetched products
+//include the array splicing function for pagination   
+
 if(empty($products)){
     echo "No producs were found";
 }
-foreach ($products as $product) {
-    include 'product-item.php'; // Include the HTML template
+foreach ($currentPageProducts as $product) {
+    include 'product-item.php';
 }
+    
 ?>
 </body>
 <script src="../src/scripts/filter-options.js"></script>
 </html>
+
+<?php print_r($products) ;?>
