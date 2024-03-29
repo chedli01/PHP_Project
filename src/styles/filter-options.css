@@ -1,3 +1,17 @@
 .hidden {
     display: none;
 }
+
+.filter-container {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.filter-container h3 {
+    font-size: 1.2em;
+}
+
+.filter-container button {
+    margin-top: 1rem;
+}

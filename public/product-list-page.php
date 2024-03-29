@@ -77,6 +77,7 @@ if (isset($_COOKIE['priceRange']) && $_COOKIE['priceRange'] != '0,0' ) {
     <link rel="stylesheet" href="../src/styles/global-styles.css">
     <link rel="stylesheet" href="../src/styles/filter-options.css">
     <link rel="stylesheet" href="../src/styles/product-card.css">
+    <link rel="stylesheet" href="../src/styles/search.css">
     <title>Document</title>
 </head>
 <body>
@@ -84,7 +85,9 @@ if (isset($_COOKIE['priceRange']) && $_COOKIE['priceRange'] != '0,0' ) {
     <form action="" method="GET">
         <input type="text" name="query" placeholder="Search for products...">
         <button type="submit">Search</button>
+        <button type="button"id="applyFilters">Apply Filters</button>
     </form>
+    
 </div>
 
 <?php include "filters.html";
