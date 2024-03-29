@@ -95,21 +95,18 @@ include_once '../src/pagination-config.php';
 <div class="pagination-links">
     <?php echo generatePaginationLinks($totalPages); ?>
 </div>
-
+  
+<section class="products-container">
 <?php
-// Include the product item template and loop through fetched products
-//include the array splicing function for pagination   
-
 if(empty($products)){
     echo "No producs were found";
 }
 foreach ($currentPageProducts as $product) {
     include 'product-item.php';
 }
-    
 ?>
+</section>
 </body>
 <script src="../src/scripts/filter-options.js"></script>
 </html>
 
-<?php print_r($products) ;?>

@@ -1,5 +1,5 @@
 <?php 
-    $productsPerPage = 5;//maximum number of products that can be displayed in a single page
+    $productsPerPage = 10;//maximum number of products that can be displayed in a single page
     $totalPages = ceil(count($products) / $productsPerPage);
     // Determine current page number from URL parameter (default to page 1)
     $pageNumber = isset($_GET['page']) ? intval($_GET['page']) : 1;
