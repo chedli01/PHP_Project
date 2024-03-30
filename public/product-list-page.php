@@ -20,6 +20,7 @@ if (!isset($_SESSION['products'])) {
     $_SESSION['products'] = $products;
 } else {
     // Retrieve products from the session
+    echo 'test';
     $products = $_SESSION['products'];
 }
 
@@ -33,7 +34,6 @@ if(isset($_GET['query'])) {
         echo "No products were found";
     }
     
-    
 }
 
 if (isset($_COOKIE['category']) && $_COOKIE['category'] != 'All' ) {
@@ -44,7 +44,7 @@ if (isset($_COOKIE['category']) && $_COOKIE['category'] != 'All' ) {
     $products = array_filter($products, function ($product) use ($selectedCategory) {
         return $product['productCategory'] == $selectedCategory;
     });
-
+    
 }
 
 // Check if price range filter is set in the cookie
@@ -62,9 +62,9 @@ if (isset($_COOKIE['priceRange']) && $_COOKIE['priceRange'] != '0,0' ) {
         return $product['productPrice'] >= $minPrice && $product['productPrice'] <= $maxPrice;
     });
 
-   
+    
 }
-$_SESSION['products'] = $products;
+
 
 ?>
 
@@ -140,3 +140,10 @@ foreach ($currentPageProducts as $index=>$product) {
 <script src="../src/scripts/filter-options.js"></script>
 </html>
 
+
+<?php 
+print('---------------------------------------------------------------------------------------');
+var_dump($currentPageProducts);
+ ?>
+
+ <?php $_SESSION['currentPageProducts'] = $currentPageProducts; ?>
