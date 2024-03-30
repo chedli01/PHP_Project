@@ -64,6 +64,7 @@ if (isset($_COOKIE['priceRange']) && $_COOKIE['priceRange'] != '0,0' ) {
 
    
 }
+$_SESSION['products'] = $products;
 
 ?>
 
@@ -81,9 +82,14 @@ if (isset($_COOKIE['priceRange']) && $_COOKIE['priceRange'] != '0,0' ) {
             array("product"=>$products[1],"quantity"=>5),
             array("product"=>$products[2],"quantity"=>3)
         );
+        if(!isset($_SESSION["user_shopping_cart"])){
         $userShoppingCart = new ShoppingCart($productsInCart=$testArray,$_SESSION["user_id"]);
-        //store cart in session
         $_SESSION["user_shopping_cart"] = serialize($userShoppingCart);
+        }
+        else{
+            $userShoppingCart = unserialize($_SESSION["user_shopping_cart"]);
+            
+        }
 
     }
  ?>
@@ -125,7 +131,7 @@ include_once '../src/pagination-config.php';
 if(empty($products)){
     echo "No producs were found";
 }
-foreach ($currentPageProducts as $product) {
+foreach ($currentPageProducts as $index=>$product) {
     include 'product-item.php';
 }
 ?>

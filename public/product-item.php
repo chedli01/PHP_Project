@@ -1,7 +1,8 @@
 
 <!-- product_item.php -->
 
-<div class="product-item">
+<form method="post" action="../src/shopping-cart/add-to-cart.php" class="product-item">
+    <input type="hidden" name="product-index" value=<?php echo $index;?>>
     <div class="product-image">
     <img src=<?php echo "../src/images/{$product['productCategory']}/{$product['productImage']}"; ?>
  alt="Product Image">
@@ -11,5 +12,7 @@
         <p class="product-description"><?php echo $product['productDescription']; ?></p>
         <p class="product-price"><?php echo $product['productPrice']; ?></p>
     </div>
-    <button type="button">Add to cart</button>
-</div>
+    
+    <button  class="add-to-cart" type="submit">Add to cart</button>
+    
+</form>

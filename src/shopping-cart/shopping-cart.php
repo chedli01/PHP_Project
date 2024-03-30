@@ -2,7 +2,7 @@
     class ShoppingCart {
         private $productsInCart;
         private $totalToPay=0;
-        private $customerId; //will store the session token
+        private $customerId; 
 
         public function __construct($productsInCart=array(),$sessionId=null){
             $this->productsInCart = $productsInCart;
@@ -29,7 +29,9 @@
             return $numberOfItems;
         }
         public function getProductsInCart(){return $this->productsInCart;}
-
+        public function addItem($cartProduct){
+            $this->productsInCart[] = $cartProduct;
+        }
         public function isAvailableInStock() {
             //todo
         }
