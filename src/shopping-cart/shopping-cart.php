@@ -29,11 +29,18 @@
             return $numberOfItems;
         }
         public function getProductsInCart(){return $this->productsInCart;}
+        public function getCustomerId(){return $this->customerId;}
         public function addItem($cartProduct){
             $this->productsInCart[] = $cartProduct;
         }
         public function isAvailableInStock() {
-            //todo
+            foreach ($this->productsInCart as $cartProduct) {
+                $quantityInStock = $cartProduct['product']['quantityInStock'];
+                if( $quantityInStock < $cartProduct['quantity']){
+                    return false;
+                }
+            }
+            return true; // All products are available in stock
         }
    }
 //exemple usage
