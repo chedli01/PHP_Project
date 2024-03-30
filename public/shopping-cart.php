@@ -1,9 +1,14 @@
 <div class="shopping-cart">
-<div class="shopping-cart-items">
             <!-- cart products section
              !-->
         <div class="cart-items">
-
+            <?php 
+                $productsInCart =$userShoppingCart->getProductsInCart();
+                foreach( $productsInCart as $product) {
+                    include "product-cart-item.php";
+                }
+             ?>
+             <style>.cart-items img {width:50px;}</style>
         </div>
         <div class="cart-summary">
             <!-- Summary of the shopping cart -->

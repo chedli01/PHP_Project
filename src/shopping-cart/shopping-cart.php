@@ -1,5 +1,4 @@
 <?php 
-    session_start();
     class ShoppingCart {
         private $productsInCart;
         private $totalToPay=0;
@@ -29,6 +28,7 @@
             }
             return $numberOfItems;
         }
+        public function getProductsInCart(){return $this->productsInCart;}
 
         public function isAvailableInStock() {
             //todo

@@ -82,6 +82,9 @@ if (isset($_COOKIE['priceRange']) && $_COOKIE['priceRange'] != '0,0' ) {
             array("product"=>$products[2],"quantity"=>3)
         );
         $userShoppingCart = new ShoppingCart($productsInCart=$testArray,$_SESSION["user_id"]);
+        //store cart in session
+        $_SESSION["user_shopping_cart"] = serialize($userShoppingCart);
+
     }
  ?>
 

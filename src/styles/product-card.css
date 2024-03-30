@@ -48,3 +48,11 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.product-details+button {
+    padding: 0.25rem;
+    background-color: orange;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 0.7rem;
+}

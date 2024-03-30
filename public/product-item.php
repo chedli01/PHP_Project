@@ -11,4 +11,5 @@
         <p class="product-description"><?php echo $product['productDescription']; ?></p>
         <p class="product-price"><?php echo $product['productPrice']; ?></p>
     </div>
+    <button type="button">Add to cart</button>
 </div>
