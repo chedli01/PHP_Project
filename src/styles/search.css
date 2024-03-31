@@ -1,0 +1,8 @@
+.search-container {
+    padding: 1rem;
+}
+
+.search-container form>input,
+.search-container button {
+    padding: 0.2rem;
+}
