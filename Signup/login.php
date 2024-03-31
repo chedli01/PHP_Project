@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(isset($_SESSION['user_id'])){
+    header("Location:../public/product-list-page.php");
+}
+
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     $mysqli=require __DIR__ . "/database.php";
     $sql=sprintf("SELECT * FROM user 
@@ -7,14 +12,19 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $user=$result->fetch_assoc();
 
     if($user){
-        if(password_verify($_POST["password"],$user["password_hash"])){
+        if($_POST["password"]==$user["password_hash"]){
             session_start();
             session_regenerate_id();
             $_SESSION["user_id"]=$user["id"];
-            header("Location:myindex.php");
+            header("Location:../public/product-list-page.php");
             exit;
         }
-        
+        else{
+           session_abort();
+        }
+    }
+    else{
+        session_abort();
     }
 
 }

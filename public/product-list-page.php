@@ -69,19 +69,20 @@ if (isset($_COOKIE['priceRange']) && $_COOKIE['priceRange'] != '0,0' ) {
 
 <?php 
 //initialize user's shopping cart 
-    $_SESSION["user_id"] = 1; // for testing
+    // $_SESSION["user_id"] = 1; // for testing
     if(!isset($_SESSION["user_id"])){ //check ken fama user 3amel login men aslou
         echo "no user is currently logged in";
     }
     else{
-        
         include "../src/shopping-cart/shopping-cart.php";
         if(!isset($_SESSION["user_shopping_cart"])){
         $userShoppingCart = new ShoppingCart($productsInCart=array(),$_SESSION["user_id"]);
         $_SESSION["user_shopping_cart"] = serialize($userShoppingCart);
+         include "shopping-cart.php";
         }
         else{
             $userShoppingCart = unserialize($_SESSION["user_shopping_cart"]);
+            include "shopping-cart.php";
             
         }
 
@@ -101,7 +102,7 @@ if (isset($_COOKIE['priceRange']) && $_COOKIE['priceRange'] != '0,0' ) {
     <title>Document</title>
 </head>
 <body>
-    <?php include "shopping-cart.php" ?>
+    
 <div class="search-container">
     <form action="" method="GET">
         <input type="text" name="query" placeholder="Search for products...">
