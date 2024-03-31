@@ -29,8 +29,8 @@ function removeCartItemHandler(event) {
                 const cartSummaryElements = event.target.closest('.cart-items').nextElementSibling.querySelectorAll(".summary");
                 const priceElement = cartSummaryElements[1];
                 const totalItemsElement = cartSummaryElements[0];
-                priceElement.textContent = responseData[1];
-                totalItemsElement.textContent = responseData[2];
+                priceElement.textContent = 'Total Price: ' + responseData[1];
+                totalItemsElement.textContent = 'Total Items: ' + responseData[2];
                 console.log(responseData[1]);
 
                 //update items UI

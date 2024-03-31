@@ -20,7 +20,6 @@ if (!isset($_SESSION['products'])) {
     $_SESSION['products'] = $products;
 } else {
     // Retrieve products from the session
-    echo 'test';
     $products = $_SESSION['products'];
 }
 
@@ -77,13 +76,8 @@ if (isset($_COOKIE['priceRange']) && $_COOKIE['priceRange'] != '0,0' ) {
     else{
         
         include "../src/shopping-cart/shopping-cart.php";
-        $testArray = array(
-            array("product"=>$products[0],"quantity"=>1),
-            array("product"=>$products[1],"quantity"=>0),
-            array("product"=>$products[2],"quantity"=>0)
-        );
         if(!isset($_SESSION["user_shopping_cart"])){
-        $userShoppingCart = new ShoppingCart($productsInCart=$testArray,$_SESSION["user_id"]);
+        $userShoppingCart = new ShoppingCart($productsInCart=array(),$_SESSION["user_id"]);
         $_SESSION["user_shopping_cart"] = serialize($userShoppingCart);
         }
         else{
