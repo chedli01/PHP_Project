@@ -8,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         if($_POST["password"]==$admin["password"]){
             session_start();
             session_regenerate_id();
-            $_SESSION["user_id"]=$admin["id"];
+            $_SESSION["admin_id"]=$admin["id"];
             header("Location:myindex.php");
             exit;
         }

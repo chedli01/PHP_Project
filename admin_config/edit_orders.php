@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION["user_id"])){
+if(isset($_SESSION["admin_id"])){
     $mysqli=require __DIR__ . "/db_connect.php";
     }
 $id=$_GET['id'];
@@ -9,6 +9,7 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
 $sql="SELECT * FROM orders WHERE orderId={$id} LIMIT 1";
 $result=$mysqli->query($sql);
 $order=$result->fetch_assoc();
+
 
 }
 if($_SERVER["REQUEST_METHOD"]=="POST"){

@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-if(isset($_SESSION["user_id"])){
+if(isset($_SESSION["admin_id"])){
     $mysqli=require __DIR__ . "/db_connect.php";
     }
 $id=$_GET['id'];

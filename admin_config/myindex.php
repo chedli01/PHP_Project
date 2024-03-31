@@ -1,8 +1,8 @@
 <?php
 session_start();
-if(isset($_SESSION["user_id"])){
+if(isset($_SESSION["admin_id"])){
     $mysqli=require __DIR__ . "/db_connect.php";
-    $sql="SELECT * FROM admin WHERE id={$_SESSION["user_id"]}";
+    $sql="SELECT * FROM admin WHERE id={$_SESSION["admin_id"]}";
     $result=$mysqli->query($sql);
     $admin=$result->fetch_assoc();}
 ?>
@@ -15,7 +15,7 @@ if(isset($_SESSION["user_id"])){
 </head>
 <body>
     <div></div>
-<?php if(isset($_SESSION["user_id"])): ?>
+<?php if(isset($_SESSION["admin_id"])): ?>
         <h1>you logged in Admin <?=  $admin["name"] ?></h1>
         <h2><a href="/clients.php">Clients</a></h2>
         <h2><a href="/products.php">Products</a></h2>
