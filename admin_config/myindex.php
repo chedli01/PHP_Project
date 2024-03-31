@@ -17,9 +17,9 @@ if(isset($_SESSION["admin_id"])){
     <div></div>
 <?php if(isset($_SESSION["admin_id"])): ?>
         <h1>you logged in Admin <?=  $admin["name"] ?></h1>
-        <h2><a href="/clients.php">Clients</a></h2>
-        <h2><a href="/products.php">Products</a></h2>
-        <h2><a href="/records.php">Records</a></h2>
+        <h2><a href="./clients.php">Clients</a></h2>
+        <h2><a href="./products.php">Products</a></h2>
+        <h2><a href="./records.php">Records</a></h2>
     <?php else: ?>
         <h3>Admin not found</h3>
     <?php endif; ?>

@@ -1,12 +1,16 @@
 <?php
-$host="localhost";
-$user="root";
-$password="";
-$database="login_db";
-$mysqli=new mysqli(hostname:$host,username:$user,password:$password,database:$database);
 
-if($mysqli->connect_errno){
-    die("Connection error :" . $mysqli->connect_error);
-}
+// Database connection parameters
+$servername = "localhost";
+$username = "root";
+$password = "123456"; // Assuming no password is set
+$database = "eCommercePHP"; // Change this to your database name
 
-return $mysqli;
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}   
+return $conn;

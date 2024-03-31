@@ -44,8 +44,8 @@ if(isset($_SESSION["admin_id"])){
                 <td>$row[phone]</td>
                 <td>$row[adress]</td>
                 <td>$row[email]</td>
-                <td><a href='/edit_client.php?id=$row[id]'><button>Edit</button></a></td>
-                <td><a href='/delete_client.php?id=$row[id]'><button>Delete</button></a></td>
+                <td><a href='./edit_client.php?id=$row[id]'><button>Edit</button></a></td>
+                <td><a href='./delete_client.php?id=$row[id]'><button>Delete</button></a></td>
 
             </tr>
                
