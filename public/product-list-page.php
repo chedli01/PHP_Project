@@ -78,9 +78,9 @@ if (isset($_COOKIE['priceRange']) && $_COOKIE['priceRange'] != '0,0' ) {
         
         include "../src/shopping-cart/shopping-cart.php";
         $testArray = array(
-            array("product"=>$products[0],"quantity"=>2),
-            array("product"=>$products[1],"quantity"=>5),
-            array("product"=>$products[2],"quantity"=>200)
+            array("product"=>$products[0],"quantity"=>1),
+            array("product"=>$products[1],"quantity"=>0),
+            array("product"=>$products[2],"quantity"=>0)
         );
         if(!isset($_SESSION["user_shopping_cart"])){
         $userShoppingCart = new ShoppingCart($productsInCart=$testArray,$_SESSION["user_id"]);
@@ -138,5 +138,6 @@ foreach ($currentPageProducts as $index=>$product) {
 </section>
 </body>
 <script src="../src/scripts/filter-options.js"></script>
+<script src="../src/scripts/add-or-remove-from-cart.js"></script>
 </html>
  <?php $_SESSION['currentPageProducts'] = $currentPageProducts; ?>

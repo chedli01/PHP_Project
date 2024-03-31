@@ -4,6 +4,6 @@
  <h2 class="product-cart-name"><?php echo $product['product']['productName']; ?></h2>
  <p class="product-cart-quantity"><?php echo "x{$product['quantity']}"; ?></p> 
 
- <button>Add</button>
- <button>Remove</button>
+ <button class="add-cart-item <?php echo $product['product']['productId']; ?>">Add</button>
+ <button class="remove-cart-item <?php echo $product['product']['productId']; ?>">Remove</button>
 </div>

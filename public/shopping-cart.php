@@ -13,8 +13,8 @@
         <div class="cart-summary">
             <!-- Summary of the shopping cart -->
             <h2>Cart Summary</h2>
-            <p>Total Items: <?php echo $userShoppingCart->getTotalItems(); ?></p>
-            <p>Total Price: <?php echo $userShoppingCart->getTotalToPay(); ?></p>
+            <p class="total-items summary">Total Items: <?php echo $userShoppingCart->getTotalItems(); ?></p>
+            <p class="total-price summary">Total Price: <?php echo $userShoppingCart->getTotalToPay(); ?></p>
             <button>Checkout</button>
         </div>
 </div>
