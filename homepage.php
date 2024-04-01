@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <script
     src="https://kit.fontawesome.com/471de5d1b2.js"
     crossorigin="anonymous"
   ></script>
 <body class="home-body">
-<?php include 'config.php'?>
+<?php include 'db\db-config.php'?>
 <?php include 'header.php'; ?>  
 <div style="display: flex; justify-content: center; align-items:center ;height:80vh; gap: 100px">
         <div style="display: flex; flex-direction:column; justify-content:center; align-items:center"><h1 style="width:40vw ;">Shop the latest tech gadgets today and experience innovation at your fingertips. Explore our curated collection of smartphones, tablets, laptops, headphones, and more.</h1>
         <div class="button" style="">Shop Now</div>
         </div>
-        <img style="scale:125%" src="images\Capture_d_écran_2024-03-28_202620-removebg-preview.png" alt="">
+        <img style="scale:125%" src="..\src\images\Capture_d_écran_2024-03-28_202620-removebg-preview.png" alt="">
 
 </div>
 <br/>
