@@ -38,19 +38,21 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
+    <link href="..\style.css" rel="stylesheet">
 </head>
-<body>
-<form method="post">
-        <div>
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email">
+<body class="home-body" style="background-color: #372E4A; display: flex; justify-content:center; align-items: center; height:90vh">
+<form style="width:fit-content" method="post">
+        <h1> Welcome Back !</h1>
+        <div class="form-element">
+            <label class="label" for="email">Email : </label>
+            <input class="form-input" type="text" id="email" name="email">
         </div>
-        <div>
-        <label for="password">Password</label>
-            <input type="password" id="password" name="password">
-
-        </div>
-        <button >Login</button>
+        <div class="form-element">
+        <label class="label" for="password">Password : </label>
+            <input class="form-input" type="password" id="password" name="password">
+            </div>
+        <button class="signup-button" >Login</button>
+        
 
     </form>
     
