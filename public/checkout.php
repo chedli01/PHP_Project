@@ -8,6 +8,7 @@
 <body>
    <?php 
    session_start();
+   if(isset($_SESSION['user_id'])){
    include "../src/shopping-cart/shopping-cart.php";
    $userShoppingCart = unserialize($_SESSION['user_shopping_cart']);
 
@@ -36,7 +37,10 @@
    //show the form
 
    include "checkout-form.php";
-   
+}
+else{
+    echo "no user logged in please log in"; //error page no user is logged in 
+}
    ?>
 
 
