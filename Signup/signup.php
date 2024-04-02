@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="..\style.css">
 </head>
-<body style="background-color: #B3AAFF ; display: flex; justify-content: center; align-items: center;">
+<body >
+    <?php include '..\header.php>'?>
+    <section style="background-color: #B3AAFF ; display: flex; justify-content: center; align-items: center;">
     <div style=" display: flex; flex-direction: column; align-items: start; justify-content: center; height: 100vh; width:50%">
     <h1 style="font-size:50px    ;">Sign Up</h1>
     <form class="signup-form"  action="process-signup.php" method="post" novalidate>
@@ -66,7 +68,8 @@
     <img  src="..\src\images\image-removebg-preview.png"/>
     </div>    
 
-
+    </section>
+    <?php include '..\footer.php' ?>
 </body>
 <script src="..\src\scripts\form-script.js">
 </script>

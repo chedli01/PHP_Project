@@ -14,15 +14,31 @@ if(isset($_SESSION["admin_id"])){
     <title>admin-page</title>
 </head>
 <body>
-    <div></div>
-<?php if(isset($_SESSION["admin_id"])): ?>
-        <h1>you logged in Admin <?=  $admin["name"] ?></h1>
-        <h2><a href="./clients.php">Clients</a></h2>
-        <h2><a href="./products.php">Products</a></h2>
-        <h2><a href="./records.php">Records</a></h2>
-    <?php else: ?>
-        <h3>Admin not found</h3>
-    <?php endif; ?>
-    
+    <div id="dashboard-content">
+        <?php if(isset($_SESSION["admin_id"])): ?>
+            <h1>Welcome Admin <?= $admin["name"] ?></h1>
+            <ul>
+                <li><a href="#" onclick="loadContent('clients.php')">Clients</a></li>
+                <li><a href="#" onclick="loadContent('products.php')">Products</a></li>
+                <li><a href="#" onclick="loadContent('records.php')">Records</a></li>
+            </ul>
+            <div id="content"></div>
+        <?php else: ?>
+            <h3>Admin not found</h3>
+        <?php endif; ?>
+    </div>
+
+    <script>
+        function loadContent(page) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("content").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", page, true);
+            xhttp.send();
+        }
+    </script>
 </body>
 </html>

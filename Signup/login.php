@@ -27,14 +27,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         session_abort();
     }
 
+
+
+
 }
-
-
-
-
-
-
-
 ?>
 
 
@@ -44,22 +40,33 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="..\style.css">
 </head>
-<body>
+
+<body >
+<?php include '..\header.php'?>
+    <section style="background-color:#883DB0;display: flex; justify-content: center; align-items: center; " >
+    <div>
+    <h1 style="font-size:50px" >Welcome Back</h1>
+    
     <form method="post">
-        <div>
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email">
+        <div class="form-element">
+            <label class="label" for="email">Email : </label>
+            <input class="form-input" type="text" id="email" name="email">
         </div>
-        <div>
-        <label for="password">Password</label>
-            <input type="password" id="password" name="password">
+        <div class="form-element">
+        <label class="label" for="password">Password : </label>
+            <input class="form-input" type="password" id="password" name="password">
 
         </div>
-        <button >Login</button>
+        <button class="signup-button" >Login</button>
 
     </form>
-    
+</div>
+
+    <img style="scale:90%" src="..\src\images\Capture_d_écran_2024-04-01_000843-removebg-preview.png"/>    
+    </section>
+    <?php include '..\footer.php' ?>
 </body>
+
 </html>
