@@ -15,6 +15,5 @@
             <h2>Cart Summary</h2>
             <p class="total-items summary">Total Items: <?php echo $userShoppingCart->getTotalItems(); ?></p>
             <p class="total-price summary">Total Price: <?php echo $userShoppingCart->getTotalToPay(); ?></p>
-            <a href="./checkout.php">Proceed to checkout</a>
         </div>
 </div>

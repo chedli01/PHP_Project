@@ -12,7 +12,7 @@
         $customerId = $shoppingCart->getCustomerId();
         $orderDate = date("d-m-y");
         $totalAmount = $shoppingCart->getTotalToPay();
-        $shippingAddress = null; //$_POST["shippingAddress"];
+        $shippingAddress = $_POST["shippingAddress"];
 
         
         
