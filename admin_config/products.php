@@ -3,14 +3,7 @@ session_start();
 if(isset($_SESSION["admin_id"])){
     $mysqli=require __DIR__ . "/db_connect.php";
     }
-
-
-
-
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +12,7 @@ if(isset($_SESSION["admin_id"])){
     <title>Products</title>
 </head>
 <body>
-    <a href="./add_product.php"><button>Add Product</button></a>
+    <a href="./add_product.php"><button class='signup-button'>Add Product</button></a>
     <table>
         <thead>
             <tr>
@@ -45,24 +38,13 @@ if(isset($_SESSION["admin_id"])){
                 <td>$row[productPrice]</td>
                 <td>$row[productDescription]</td>
                 <td>$row[quantityInStock]</td>
-                <td><a href='./edit_product.php?id=$row[productId]'><button>Edit</button></a></td>
-                <td><a href='./delete_product.php?id=$row[productId]'><button>Delete</button></a></td>
+                <td><a href='./edit_product.php?id=$row[productId]'><button class='signup-button'>Edit</button></a></td>
+                <td><a href='./delete_product.php?id=$row[productId]'><button class='signup-button'>Delete</button></a></td>
 
             </tr>
-               
-
-
-
-
-
                 ";
             }
             ?>
-            
-            
-            
-            
-           
         </tbody>
     </table>
 

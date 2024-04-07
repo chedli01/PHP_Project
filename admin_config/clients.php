@@ -1,16 +1,9 @@
 <?php
-session_start();
+session_start(); 
 if(isset($_SESSION["admin_id"])){
     $mysqli=require __DIR__ . "/db_connect.php";
     }
-
-
-
-
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +12,7 @@ if(isset($_SESSION["admin_id"])){
     <title>clients</title>
 </head>
 <body>
-    <table>
+    <table class="data-table">
         <thead>
             <tr>
                 <th>ID</th>
@@ -38,33 +31,18 @@ if(isset($_SESSION["admin_id"])){
 
              while($row=$result->fetch_assoc()){
                 echo "<tr>
-                <td>$row[id]</td>
+                <td>$row[userId]</td>
                 <td>$row[FirstName]</td>
                 <td>$row[LastName]</td>
                 <td>$row[phone]</td>
                 <td>$row[adress]</td>
                 <td>$row[email]</td>
-                <td><a href='./edit_client.php?id=$row[id]'><button>Edit</button></a></td>
-                <td><a href='./delete_client.php?id=$row[id]'><button>Delete</button></a></td>
-
-            </tr>
-               
-
-
-
-
-
-                ";
+                <td><a href='./edit_client.php?id=$row[userId]'><button class='signup-button'>Edit</button></a></td>
+                <td><a href='./delete_client.php?id=$row[userId]'><button class='signup-button'>Delete</button></a></td>
+            </tr> ";
             }
             ?>
-            
-            
-            
-            
-           
         </tbody>
     </table>
-
-    
 </body>
 </html>
