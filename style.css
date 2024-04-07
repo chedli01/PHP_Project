@@ -182,5 +182,37 @@ i:hover{
 .signup-button:hover{
 color: white;
 background-color: #0B001A ;
-   scale:105%    
+scale:105%    
+}
+.dashboard-button{
+    color:darkslateblue;
+    border-radius: 10px;
+    background-color:#ffc978;
+    width:20vw;
+    text-align: center;
+    padding: 20px 30px;
+    font-size: 30px;
+}
+.sidebar{
+    height:100vh;
+    width: 25vw;
+    background-color:#ffecd0;
+    border-radius: 20px;
+    padding: 0px 20px;
+}
+table, th, td{
+border: 3px solid #0B001A;
+border-collapse: collapse;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+table{
+    width: 100%;
+}
+th{
+    background: #401b74;
+    color: white;
+    padding: 10px;
+}
+td{
+    background-color: #ffc978;
 }
