@@ -17,9 +17,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $orderDate=$_POST["orderDate"];
     $totalAmount=$_POST["totalAmount"];
     $shippingAdress=$_POST["shippingAdress"];
+    $orderStatus=$_POST["orderStatus"];
     
 
-    $sqli="UPDATE orders SET customerId='$customerId',orderDate='$orderDate',totalAmount='$totalAmount',shippingAdress='$shippingAdress' WHERE orderId=$id ";
+    $sqli="UPDATE orders SET customerId='$customerId',orderDate='$orderDate',totalAmount='$totalAmount',shippingAdress='$shippingAdress',orderStatus='$orderStatus' WHERE orderId=$id ";
     $result=$mysqli->query($sqli);
     header("Location:myindex.php");
 }
@@ -75,6 +76,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         <div>
             <label for="shippingAdress">shippingAdress</label>
             <input type="text" id="shippingAdress" name="shippingAdress" value=<?= $order["shippingAdress"]?>>
+        </div>
+        <div>
+            <label for="orderStatus">orderStatus</label>
+            <input type="text" id="orderStatus" name="orderStatus" value=<?= $order["orderStatus"]?>>
         </div>
         
         <button>Update</button>
