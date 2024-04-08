@@ -22,33 +22,34 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADD Products</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="..\style.css">
 </head>
 
-<body>
-    <form method="post" novalidate>
-        <div>
-            <label for="productCategory">productCategory</label>
-            <input type="text" id="productCategory" name="productCategory" >
+<body style="background-color:#edb35c; display:flex; flex-direction:column ; justify-content:center; align-items:center">
+<h1>Add Product:</h1>
+    <form class="editing-form" method="post" novalidate>
+        <div class="form-element">
+             <label class="label" for="productCategory">productCategory</label>
+            <input class="form-input" type="text" id="productCategory" name="productCategory" >
         </div>
-        <div>
-            <label for="productName">productName</label>
-            <input type="text" id="productName" name="productName" >
+        <div class="form-element">
+             <label class="label" for="productName">productName</label>
+            <input class="form-input" type="text" id="productName" name="productName" >
         </div>
-        <div>
-            <label for="productPrice">productPrice-Number</label>
-            <input type="text" id="productPrice" name="productPrice" >
+        <div class="form-element">
+             <label class="label" for="productPrice">productPrice-Number</label>
+            <input class="form-input" type="text" id="productPrice" name="productPrice" >
         </div>
-        <div>
-            <label for="productDescription">productDescription</label>
-            <input type="text" id="productDescription" name="productDescription">
+        <div class="form-element">
+             <label class="label" for="productDescription">productDescription</label>
+            <input class="form-input" type="text" id="productDescription" name="productDescription">
         </div>
         
-        <div>
-            <label for="quantityInStock">quantityInStock</label>
-            <input type="text" id="quantityInStock" name="quantityInStock" >
+        <div class="form-element">
+             <label class="label" for="quantityInStock">quantityInStock</label>
+            <input class="form-input" type="text" id="quantityInStock" name="quantityInStock" >
         </div>
-        <button>Update</button>
+        <button class="signup-button"> Update</button>
 
 
 
