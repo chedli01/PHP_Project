@@ -164,6 +164,7 @@ i:hover{
 .error-message {
     color: red;
     font-size: 0.8em;
+    text-align: end;
 }
 .form-element{
     display: flex;
@@ -176,8 +177,7 @@ i:hover{
     align-self: self-end;
     font-size: 18px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:#0B001A ;
-
+    color:#0B001A
 }
 .signup-button:hover{
 color: white;
@@ -215,4 +215,18 @@ th{
 }
 td{
     background-color: #ffc978;
+}
+.editing-form{
+    
+     background-color:#f5c782;
+     padding:40px;
+     border-radius:20px
+
+}
+.editing-body {
+    background-color:#edb35c;
+     display:flex; 
+     flex-direction:column
+      ; justify-content:center;
+       align-items:center
 }

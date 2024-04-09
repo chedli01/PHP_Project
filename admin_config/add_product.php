@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="..\style.css">
 </head>
 
-<body style="background-color:#edb35c; display:flex; flex-direction:column ; justify-content:center; align-items:center">
+<body class="editing-body">
     <h1>Add Product:</h1>
     <form class="editing-form" method="post" novalidate onsubmit="return validateForm(event)">
     <div>

@@ -13,6 +13,8 @@ if(isset($_SESSION["admin_id"])){
 </head>
 <body>
     <a href="./add_product.php"><button class='signup-button'>Add Product</button></a>
+    <br/>
+    <br/>
     <table>
         <thead>
             <tr>
