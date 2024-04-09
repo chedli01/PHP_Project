@@ -12,17 +12,22 @@ if(isset($_SESSION["admin_id"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin-page</title>
+    <link href="..\style.css" rel="stylesheet"/>
 </head>
-<body>
-    <div id="dashboard-content">
+<body style="background-color:#FFDFAF" >
+    <div id="dashboard-content" style="display:flex">
         <?php if(isset($_SESSION["admin_id"])): ?>
-            <h1>Welcome Admin <?= $admin["name"] ?></h1>
-            <ul>
-                <li><a href="#" onclick="loadContent('clients.php')">Clients</a></li>
-                <li><a href="#" onclick="loadContent('products.php')">Products</a></li>
-                <li><a href="#" onclick="loadContent('records.php')">Records</a></li>
+            <div class="sidebar">
+            <h1 style="color:#15062b; text-align:start ">Admin: <br/><?= $admin["name"] ?></h1>
+            <ul style="flex-direction: column">
+                <li ><button class="dashboard-button" href="#" onclick="loadContent('clients.php')">Clients</button></li>
+                <li ><button class="dashboard-button" href="#" onclick="loadContent('products.php')">Products</button></li>
+                <li ><button class="dashboard-button" href="#" onclick="loadContent('records.php')">Records</button></li>
             </ul>
-            <div id="content"></div>
+        </div>
+            <div style="width:75vw; height:100vh; overflow: scroll" id="content">
+               Hello 
+            </div>
         <?php else: ?>
             <h3>Admin not found</h3>
         <?php endif; ?>

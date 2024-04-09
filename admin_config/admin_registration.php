@@ -37,12 +37,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
+    <title>Log In</title>
     <link href="..\style.css" rel="stylesheet">
 </head>
-<body class="home-body" style="background-color: #372E4A; display: flex; justify-content:center; align-items: center; height:90vh">
-<form style="width:fit-content" method="post">
-        <h1> Welcome Back !</h1>
+<body class="home-body" style="background-color:#2F296C; display: flex; justify-content:center; align-items: center; height:90vh">
+<form style="width:fit-content ; background-color: #938edc; padding:20px 30px; border-radius: 20px" method="post">
+        <h1 style="color:#2F296C"> Welcome Back !</h1>
         <div class="form-element">
             <label class="label" for="email">Email : </label>
             <input class="form-input" type="text" id="email" name="email">

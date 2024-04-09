@@ -16,7 +16,7 @@
 
         
         
-        $sql = "INSERT INTO orders (customerId, orderDate, totalAmount, shippingAddress) VALUES ('$customerId', '$orderDate', '$totalAmount', '$shippingAddress')";
+        $sql = "INSERT INTO orders (customerId, orderDate, totalAmount, shippingAdress) VALUES ('$customerId', '$orderDate', '$totalAmount', '$shippingAddress')";
 
         // Execute the SQL query
         if ($conn->query($sql) === TRUE) {

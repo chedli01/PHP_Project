@@ -4,14 +4,7 @@ if(isset($_SESSION["admin_id"])){
     $mysqli=require __DIR__ . "/db_connect.php";
     }
     $id=$_GET['id'];
-
-
-
-
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,12 +18,9 @@ if(isset($_SESSION["admin_id"])){
             <tr>
                 <th>orderDetailId</th>
                 <th>orderId</th>
-                <th>productId</th>
-                
+                <th>productId</th>              
                 <th>quantity</th>
                 <th>price</th>
-                
-
             </tr>
         </thead>
         <tbody>
@@ -41,20 +31,11 @@ if(isset($_SESSION["admin_id"])){
              while($row=$result->fetch_assoc()){
                 echo "<tr>
                 <td>$row[orderDetailId]</td>
-                
                 <td>$row[orderId]</td>
-                <td>$row[productId]</td>
-                
+                <td>$row[productId]</td>      
                 <td>$row[quantity]</td>
                 <td>$row[price]</td>
-
             </tr>
-               
-
-
-
-
-
                 ";
             }
             ?>
