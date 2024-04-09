@@ -12,7 +12,7 @@
                 <li><a href= <?php echo "$PATH_TO_LOGIN"; ?>>Log In</a></li>
                 <li><a href= <?php echo "$PATH_TO_SIGNUP"; ?>>Sign Up </a></li>
             <?php else : ?>
-                <li><a><?php echo($_SESSION["user_id"]) ?></a></li>
+                <li><a><?php echo($_SESSION["user_name"]) ?></a></li>
                 <li><a href= <?php echo "$PATH_TO_LOGOUT"; ?> >Logout</a></li>
             <?php endif ?>
             </ul>

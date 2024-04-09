@@ -18,6 +18,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             session_start();
             session_regenerate_id();
             $_SESSION["user_id"]=$user["id"];
+            $_SESSION["user_name"] = $user["FirstName"];
             header("Location:../public/product-list-page.php");
             exit;
         }
