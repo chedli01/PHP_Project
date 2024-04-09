@@ -12,7 +12,15 @@
   ></script>
 <body class="home-body">
 <?php include 'db\db-config.php'?>
-<?php include 'header.php'; ?>  
+<?php
+session_start();
+$PATH_TO_SHOP = "./public/product-list-page.php";
+$PATH_TO_LOGIN = "./Signup/login.php";
+$PATH_TO_LOGOUT = "./Signup/logout.php";
+$PATH_TO_SIGNUP = "./Signup/signup.php";
+$PATH_TO_ABOUT = "about.php";
+$PATH_TO_CONTACT = "#";
+include 'header.php'; ?>  
 <div style="display: flex; justify-content: center; align-items:center ;height:80vh; gap: 100px">
         <div style="display: flex; flex-direction:column; justify-content:center; align-items:center"><h1 style="width:40vw ;">Shop the latest tech gadgets today and experience innovation at your fingertips. Explore our curated collection of smartphones, tablets, laptops, headphones, and more.</h1>
         <div class="button" style="">Shop Now</div>

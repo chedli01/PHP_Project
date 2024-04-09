@@ -9,7 +9,14 @@
 </head>
 
 <body>
-    <?php include '..\header.php'?>
+    <?php
+     $PATH_TO_SHOP = "../public/product-list-page.php";
+     $PATH_TO_LOGIN = "login.php";
+     $PATH_TO_LOGOUT = "logout.php";
+     $PATH_TO_SIGNUP = "#";
+     $PATH_TO_ABOUT = "../about.php";
+     $PATH_TO_CONTACT = "#";
+     include '..\header.php'?>
     <section style="background-color: #B3AAFF; display: flex; justify-content: center; align-items: center;">
         <div style="display: flex; flex-direction: column; align-items: start; justify-content: center; height: 100vh; width:50%">
             <h1 style="font-size:50px;">Sign Up</h1>

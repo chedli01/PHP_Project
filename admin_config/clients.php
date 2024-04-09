@@ -31,14 +31,14 @@ if(isset($_SESSION["admin_id"])){
 
              while($row=$result->fetch_assoc()){
                 echo "<tr>
-                <td>$row[userId]</td>
+                <td>$row[id]</td>
                 <td>$row[FirstName]</td>
                 <td>$row[LastName]</td>
                 <td>$row[phone]</td>
                 <td>$row[adress]</td>
                 <td>$row[email]</td>
-                <td><a href='./edit_client.php?id=$row[userId]'><button class='signup-button'>Edit</button></a></td>
-                <td><a href='./delete_client.php?id=$row[userId]'><button class='signup-button'>Delete</button></a></td>
+                <td><a href='./edit_client.php?id=$row[id]'><button class='signup-button'>Edit</button></a></td>
+                <td><a href='./delete_client.php?id=$row[id]'><button class='signup-button'>Delete</button></a></td>
             </tr> ";
             }
             ?>

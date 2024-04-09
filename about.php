@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style\style.css"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <script
     src="https://kit.fontawesome.com/471de5d1b2.js"
     crossorigin="anonymous"
   ></script>
 <body class=home-body>
-    <?php include 'header.php'; ?>
+    <?php 
+     session_start();
+     $PATH_TO_SHOP = "./public/product-list-page.php";
+     $PATH_TO_LOGIN = "./Signup/login.php";
+     $PATH_TO_LOGOUT = "./Signup/logout.php";
+     $PATH_TO_SIGNUP = "./Signup/signup.php";
+     $PATH_TO_ABOUT = "#";
+     $PATH_TO_CONTACT = "#";
+    include 'header.php'; ?>
     <section  style="display: flex; flex-direction: column ; align-items: start ; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding:30px; text-align: justify">
     <h1 style="font-size:90px ; color:white ; margin-bottom: 0px; ">About us</h1>
     <div style="display: flex; justify-content: center ; gap: 20px"><p style="color: white ; font-size:35px; width: 50%"> Welcome to TechHive, your go-to destination for the latest and greatest in technology!
@@ -22,7 +30,7 @@
     
 
 </p>
-    <img style="scale:100%" src="images\Capture_d_écran_2024-03-30_165255-removebg-preview (1).png" alt="">
+    <img style="scale:100%" src="./src/images/Capture_d_écran_2024-03-30_165255-removebg-preview (1).png" alt="">
 </div>
 <br/>
 <br/>

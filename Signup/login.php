@@ -42,11 +42,18 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 </head>
 
 <body>
-    <?php include '..\header.php'?>
+    <?php
+    $PATH_TO_SHOP = "../public/product-list-page.php";
+    $PATH_TO_LOGIN = "#";
+    $PATH_TO_LOGOUT = "logout.php";
+    $PATH_TO_SIGNUP = "signup.php";
+    $PATH_TO_ABOUT = "../about.php";
+    $PATH_TO_CONTACT = "#";
+     include '..\header.php'?>
     <section style="background-color:#883DB0;display: flex; justify-content: center; align-items: center; " >
         <div>
             <h1 style="font-size:50px" >Welcome Back</h1>
-            <form method="post" onsubmit="return validateForm(event)">
+            <form method="post" >
                 <div>
                     <div class="form-element">
                         <label class="label" for="email">Email : </label>
