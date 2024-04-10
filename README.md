@@ -23,3 +23,4 @@ the  email you send to the website through the contact page comes on my personal
 ## Note
 
 We use the Phpmailer library and Gmail SMTP server for email communication.
+Upon making a new order an sql trigger is responsible to deduct the appropriate stock quantities
