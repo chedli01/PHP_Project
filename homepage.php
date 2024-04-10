@@ -19,7 +19,7 @@ $PATH_TO_LOGIN = "./Signup/login.php";
 $PATH_TO_LOGOUT = "./Signup/logout.php";
 $PATH_TO_SIGNUP = "./Signup/signup.php";
 $PATH_TO_ABOUT = "about.php";
-$PATH_TO_CONTACT = "#";
+$PATH_TO_CONTACT = "contact.php";
 include 'header.php'; ?>  
 <div style="display: flex; justify-content: center; align-items:center ;height:80vh; gap: 100px">
         <div style="display: flex; flex-direction:column; justify-content:center; align-items:center"><h1 style="width:40vw ;">Shop the latest tech gadgets today and experience innovation at your fingertips. Explore our curated collection of smartphones, tablets, laptops, headphones, and more.</h1>

@@ -7,7 +7,7 @@ if(isset($_SESSION['user_id'])){
 $error_message = '';
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
-    $mysqli=require __DIR__ . "/database.php";
+    $mysqli=require "../db/db-config.php";
     $sql=sprintf("SELECT * FROM user 
           WHERE email='%s'",$mysqli->real_escape_string($_POST["email"]));
     $result=$mysqli->query($sql);
@@ -49,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $PATH_TO_LOGOUT = "logout.php";
     $PATH_TO_SIGNUP = "signup.php";
     $PATH_TO_ABOUT = "../about.php";
-    $PATH_TO_CONTACT = "#";
+    $PATH_TO_CONTACT = "../contact.php";
      include '..\header.php'?>
     <section style="background-color:#883DB0;display: flex; justify-content: center; align-items: center; " >
         <div>

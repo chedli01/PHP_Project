@@ -11,9 +11,9 @@ if (!is_numeric($_POST["phone"])){
 if(strlen($_POST["phone"])!=8){
     die("Phone-Number should be formed with 8 numbers");
 }
-if (empty($_POST["adress"])){
-    die("Adress is required");
-}
+// if (empty($_POST["adress"])){
+//     die("Adress is required");
+// }
 
 
 if(!filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
@@ -33,9 +33,9 @@ if($_POST["password"]!=$_POST["password_confirmation"]){
 
 }
 
-$password_hash=password_hash($_POST["password"],PASSWORD_DEFAULT);
+// $password_hash=password_hash($_POST["password"],PASSWORD_DEFAULT);
 
-$mysqli=require __DIR__ . "/database.php";
+$mysqli=require "../db/db-config.php";
 
 $sql="INSERT INTO user(FirstName,LastName,phone,adress,email,password_hash)
       Values (?,?,?,?,?,?)";
@@ -43,9 +43,9 @@ $stmt=$mysqli->stmt_init();
 if(!$stmt->prepare($sql)){
     die("SQL error");
 }
-$stmt->bind_param("ssssss",$_POST["FirstName"],$_POST["LastName"],$_POST["phone"],$_POST["adress"],$_POST["email"],$password_hash);
+$stmt->bind_param("ssssss",$_POST["FirstName"],$_POST["LastName"],$_POST["phone"],$_POST["adress"],$_POST["email"],$_POST['password']);
 if($stmt->execute()){
-    header("Location:signup-success.html");
+    header("Location:../homepage.php");
 }
 else{
     die($mysqli->error ." " .$mysqli->errno);

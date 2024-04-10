@@ -2,7 +2,7 @@
 <?php
 session_start();
 if(isset($_SESSION["admin_id"])){
-    $mysqli = require __DIR__ . "/db_connect.php";
+    $mysqli=require "../db/db-config.php";
 }
 
 $id = $_GET['id'];
