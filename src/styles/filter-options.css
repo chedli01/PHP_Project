@@ -4,10 +4,10 @@
 
 .filter-container {
     border: 1px solid rgb(190, 190, 190);
-    padding: 1rem ;
+    padding: 1rem;
     border-radius: 1rem;
     background-color: rgb(255, 209, 140);
-    width:70% ;
+    width: 70%;
 }
 
 .filter-container h3 {
@@ -17,21 +17,29 @@
 .filter-container button {
     margin-top: 1rem;
 }
+
 .range {
 
-  accent-color: rgb(223, 145, 0);
-  
+    accent-color: rgb(223, 145, 0);
+
 }
-.sidebar-button{
+
+.sidebar-button,
+.add-cart-item,
+.remove-cart-item {
     background-color: #26004a;
-    color:white;
+    color: white;
     border-radius: 5px;
 }
-.sidebar-button:hover{
+
+.sidebar-button:hover,
+.add-cart-item:hover,
+.remove-cart-item:hover {
     scale: 105%
 }
-.shopping-cart{
+
+.shopping-cart {
     display: flex;
     flex-wrap: wrap;
-    
+
 }

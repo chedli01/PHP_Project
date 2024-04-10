@@ -26,7 +26,7 @@ if(isset($_SESSION["admin_id"])){
         </thead>
         <tbody>
             <?php
-            $sql="SELECT * FROM orderdetails where orderId={$id}";
+            $sql="SELECT * FROM orderDetails where orderId={$id}";
             $result=$mysqli->query($sql);
 
              while($row=$result->fetch_assoc()){
