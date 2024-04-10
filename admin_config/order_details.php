@@ -11,9 +11,10 @@ if(isset($_SESSION["admin_id"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>order_Details</title>
+    <link href="..\style.css" rel="stylesheet" />
 </head>
-<body>
-    <table>
+<body style="background-color:#FFDFAF ; display: flex; justify-content:center; align-items:center">
+    <table style="margin-top:50px">
         <thead>
             <tr>
                 <th>orderDetailId</th>
