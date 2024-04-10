@@ -230,3 +230,39 @@ td{
       ; justify-content:center;
        align-items:center
 }
+.product-list-body{
+    background-color: #ffd597b9;
+}
+.checkout-form{
+    background-color:#ffc47b;
+    height:70vh;
+    max-width:60vw;
+    padding: 20px 100px;
+    font-size:25px;
+    align-self: center;
+    border-radius: 20px;
+    display:flex; 
+    flex-direction: column;
+    gap:30px;
+    
+}
+.checkout-form-element{
+    justify-content: start;
+    align-items: baseline;
+    gap:15px;
+
+}
+.form-info{
+    font-size:20px;
+    color:gray;
+}
+.pagination-links{
+
+    height:fit-content;
+    width:fit-content;
+    background-color: rgb(255, 198, 93);
+    padding: 8px; 
+    border-radius: 20px; 
+    margin:30px;
+    color:white
+}

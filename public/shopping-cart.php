@@ -1,4 +1,4 @@
-<div class="shopping-cart">
+<div class="shopping-cart filter-container">
             <!-- cart products section
              !-->
         <div class="cart-items">
@@ -15,6 +15,6 @@
             <h2>Cart Summary</h2>
             <p class="total-items summary">Total Items: <?php echo $userShoppingCart->getTotalItems(); ?></p>
             <p class="total-price summary">Total Price: <?php echo $userShoppingCart->getTotalToPay(); ?></p>
-            <a href="./checkout.php">Proceed to checkout</a>
+            <a href="./checkout.php" ><button class="sidebar-button">Proceed to checkout</button></a>
         </div>
 </div>

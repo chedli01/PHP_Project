@@ -55,10 +55,6 @@ if(isset($_SESSION["admin_id"])){
     </table>
 
 <ul>
-                <li><a href="#" onclick="loadContent('pending.php')">pending</a></li>
-                <li><a href="#" onclick="loadContent('processing.php')">processing</a></li>
-                <li><a href="#" onclick="loadContent('shipped.php')">shipped</a></li>
-                <li><a href="#" onclick="loadContent('delivred.php')">delivred</a></li>
             </ul>
 
     

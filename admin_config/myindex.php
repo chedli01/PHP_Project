@@ -26,7 +26,7 @@ if(isset($_SESSION["admin_id"])){
             </ul>
         </div>
             <div style="width:75vw; height:100vh; overflow: scroll" id="content">
-               Hello 
+              <h1 style="color:black">Welcome Back Admin ! <br/> </h1>
             </div>
         <?php else: ?>
             <h3>Admin not found</h3>

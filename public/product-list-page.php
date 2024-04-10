@@ -29,9 +29,9 @@ if(isset($_GET['query'])) {
     include "../src/search.php";
 
     $products = searchProducts($products,$searchQuery);
-    if(empty($products)){
-        echo "No products were found";
-    }
+    // if(empty($products)){
+    //     echo "No products were found";
+    // }
     
 }
 
@@ -75,6 +75,38 @@ $PATH_TO_ABOUT = "../about.php";
 $PATH_TO_CONTACT = "#";
  include "../header.php";
  ?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/styles/global-styles.css">
+    <link rel="stylesheet" href="../src/styles/filter-options.css">
+    <link rel="stylesheet" href="../src/styles/product-card.css">
+    <link rel="stylesheet" href="../src/styles/search.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body class="product-list-body">
+<div style="display:flex">
+<div class="filters-sidebar">
+<div class="search-container">
+    <form action="" method="GET">
+        <input type="text" name="query" placeholder="Search for products...">
+        <button type="submit">Search</button>
+        <button type="button"id="applyFilters">Apply Filters</button>
+    </form>
+    
+</div>
+
+<?php include "filters.html";
+include "../src/pagination-util.php";
+include_once '../src/pagination-config.php';
+ ?>
+
 <?php 
 //initialize user's shopping cart 
     // $_SESSION["user_id"] = 1; // for testing
@@ -96,40 +128,11 @@ $PATH_TO_CONTACT = "#";
 
     }
  ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/styles/global-styles.css">
-    <link rel="stylesheet" href="../src/styles/filter-options.css">
-    <link rel="stylesheet" href="../src/styles/product-card.css">
-    <link rel="stylesheet" href="../src/styles/search.css">
-    <link rel="stylesheet" href="../style.css">
-    <title>Document</title>
-</head>
-<body>
-<div class="search-container">
-    <form action="" method="GET">
-        <input type="text" name="query" placeholder="Search for products...">
-        <button type="submit">Search</button>
-        <button type="button"id="applyFilters">Apply Filters</button>
-    </form>
-    
-</div>
-
-<?php include "filters.html";
-include "../src/pagination-util.php";
-include_once '../src/pagination-config.php';
- ?>
-
-<div class="pagination-links">
-    <?php echo generatePaginationLinks($totalPages); ?>
-</div>
-  
+ </div>
+ <div>
 <section class="products-container">
+
+
 <?php
 if(empty($products)){
     echo "No producs were found";
@@ -139,6 +142,16 @@ foreach ($currentPageProducts as $index=>$product) {
 }
 ?>
 </section>
+<div class="pagination-links">
+    <?php echo generatePaginationLinks($totalPages); ?>
+</div> 
+</div>
+  
+</div>
+
+
+
+<?php include "../footer.php" ?>
 </body>
 <script src="../src/scripts/filter-options.js"></script>
 <script src="../src/scripts/add-or-remove-from-cart.js"></script>

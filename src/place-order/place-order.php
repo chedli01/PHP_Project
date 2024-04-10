@@ -22,7 +22,8 @@
         if ($conn->query($sql) === TRUE) {
             // Order inserted successfully
             $orderId = $conn->insert_id; // Retrieve the orderId
-            echo "Order placed successfully! Order ID: $orderId";
+            // echo "Order placed successfully! Order ID: $orderId";
+            header("Location:..\..\public\product-list-page.php");
         } else {
             // Error executing the SQL query
             echo "Error: " . $sql . "<br>" . $conn->error;
