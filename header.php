@@ -8,7 +8,7 @@
             <!-- <input class="search-bar" type="text" placeholder="Search.."> -->
 
             <div  class="search-container">
-    <form style="display:flex;"id= "search-form" action="../public/product-list-page.php" method="GET">
+    <form id= "search-form" action="../public/product-list-page.php" method="GET">
         <input type="text" name="query" placeholder="Search for products...">
         <button id="search-icon" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: grey" ></i></button>
     </form>
