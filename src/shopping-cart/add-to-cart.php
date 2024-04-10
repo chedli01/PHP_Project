@@ -13,7 +13,9 @@
         $_SESSION['user_shopping_cart'] = serialize($shoppingCard);
         }
     }
-    addToCart();
+    if(isset($_SESSION["user_id"])){
+        addToCart();
+    }
     header("Location: ../../public/product-list-page.php");
     exit(); 
  ?>

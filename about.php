@@ -24,7 +24,8 @@
      $PATH_TO_SIGNUP = "./Signup/signup.php";
      $PATH_TO_ABOUT = "#";
      $PATH_TO_CONTACT = "contact.php";
-    include 'header.php'; ?>
+    include 'header.php';
+    echo "test"; ?>
     <section  style="display: flex; flex-direction: column ; align-items: start ; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding:30px; ">
     <h1 style="font-size:60px ; color:white ; margin-bottom: 0px; ">About us</h1>
     <div style="display: flex; justify-content: center ; gap: 20px"><p style="color: white ; font-size:30px; width: 50%"> Welcome to TechHive, your go-to destination for the latest and greatest in technology!
