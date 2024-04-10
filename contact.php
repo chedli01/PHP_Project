@@ -17,7 +17,7 @@
     <input class="form-input" type="email" id="email" name="email" required>
 </div>
    <div class="form-element"> <label class="label" for="category">Category:</label>
-    <select id="category" name="category" required>
+    <select class="form-input" id="category" name="category" required>
    <option value="">Select a category</option>
         <option value="Technical Issue">Technical Issue</option>
         <option value="Billing Inquiry">Billing Inquiry</option>
