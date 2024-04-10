@@ -1,8 +1,9 @@
 .product-item {
-    border: 1px solid rgb(190, 190, 190);
+    border: 1px solid hsl(0, 0%, 75%);
+    background-color: #fffbf2;
     border-radius: 10px;
     margin: 1rem;
-    max-width: 10rem;
+    width:22vw;
     padding: 0.7rem;
     display: flex;
     flex-direction: column;
@@ -10,15 +11,16 @@
 }
 
 .product-price {
-    text-decoration: underline;
-    background-color: rgb(66, 204, 204);
+    
+    background-color: rgb(254, 220, 185);
     width: min-content;
     border-radius: 3px;
     padding: 0.5rem;
 }
 
 .product-image img {
-    width: 10rem;
+    align-self: center;
+    width: 95%;
     aspect-ratio: 1;
 }
 
@@ -26,10 +28,11 @@
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: center;
+    width: fit-content;
 }
 
 .product-name {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
 
 }
@@ -51,8 +54,12 @@
 
 .product-details+button {
     padding: 0.25rem;
-    background-color: orange;
+    background-color: rgb(36, 0, 81);
+    color:white;
     border: none;
     border-radius: 0.5rem;
     margin-top: 0.7rem;
+}
+.product-details+button :hover{
+    scale: 105%
 }

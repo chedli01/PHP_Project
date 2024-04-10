@@ -1,8 +1,28 @@
 .search-container {
     padding: 1rem;
+
 }
 
 .search-container form>input,
 .search-container button {
-    padding: 0.2rem;
+    padding: 10PX 15PX;
+    border-radius: 10px;
+    font-size: 18px;
+    
+    border:#ffcf7c solid 2px ;
+
+}
+.search-container button {
+   background-color: #FFD18C
+}
+.search-container button:hover{
+    scale:105%
+}
+.filters-sidebar{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
+    background-color: rgb(255, 245, 235);
 }

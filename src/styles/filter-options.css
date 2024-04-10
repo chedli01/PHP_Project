@@ -4,8 +4,10 @@
 
 .filter-container {
     border: 1px solid rgb(190, 190, 190);
-    padding: 1rem;
+    padding: 1rem ;
     border-radius: 1rem;
+    background-color: rgb(255, 209, 140);
+    width:70% ;
 }
 
 .filter-container h3 {
@@ -14,4 +16,22 @@
 
 .filter-container button {
     margin-top: 1rem;
+}
+.range {
+
+  accent-color: rgb(223, 145, 0);
+  
+}
+.sidebar-button{
+    background-color: #26004a;
+    color:white;
+    border-radius: 5px;
+}
+.sidebar-button:hover{
+    scale: 105%
+}
+.shopping-cart{
+    display: flex;
+    flex-wrap: wrap;
+    
 }
