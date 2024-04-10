@@ -1,4 +1,8 @@
-<section style="width: 100vw; background-color: #0B001A">
+<script
+    src="https://kit.fontawesome.com/471de5d1b2.js"
+    crossorigin="anonymous"
+  ></script>
+<section style="width: 100%; background-color: #0B001A">
    <div style="display: flex; color:white; justify-content: center;  align-items: center; gap:100px" >
       <div>
          <h3>contact info</h3>

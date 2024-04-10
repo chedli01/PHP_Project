@@ -1,4 +1,7 @@
-
+<script
+    src="https://kit.fontawesome.com/471de5d1b2.js"
+    crossorigin="anonymous"
+  ></script>
 <header>
 
             <img class="image" src="..\src\images\Capture_d_écran_2024-03-28_203421-removebg-preview.png" alt="">

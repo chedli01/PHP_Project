@@ -20,9 +20,9 @@
      $PATH_TO_ABOUT = "#";
      $PATH_TO_CONTACT = "#";
     include 'header.php'; ?>
-    <section  style="display: flex; flex-direction: column ; align-items: start ; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding:30px; text-align: justify">
-    <h1 style="font-size:90px ; color:white ; margin-bottom: 0px; ">About us</h1>
-    <div style="display: flex; justify-content: center ; gap: 20px"><p style="color: white ; font-size:35px; width: 50%"> Welcome to TechHive, your go-to destination for the latest and greatest in technology!
+    <section  style="display: flex; flex-direction: column ; align-items: start ; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding:30px; ">
+    <h1 style="font-size:60px ; color:white ; margin-bottom: 0px; ">About us</h1>
+    <div style="display: flex; justify-content: center ; gap: 20px"><p style="color: white ; font-size:30px; width: 50%"> Welcome to TechHive, your go-to destination for the latest and greatest in technology!
 
     <br/>
 <br/>
@@ -30,10 +30,9 @@
     
 
 </p>
-    <img style="scale:100%" src="./src/images/Capture_d_écran_2024-03-30_165255-removebg-preview (1).png" alt="">
+    <img style="scale:100%; transform: translateY(-150px)" src="..\src\images\image-removebg-preview (2).png" alt="">
 </div>
-<br/>
-<br/>
+<h1 style="font-size:60px ; color:white ; margin-bottom: 0px; ">Our Mission</h1>
     <p style="color: white ; font-size :25px; padding: 0px 50px" >
    
 
