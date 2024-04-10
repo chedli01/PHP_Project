@@ -316,3 +316,14 @@ td {
     flex-direction: row;
     justify-content: center;
 }
+.contact-body{
+    background-color: #a28dc0;
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+}
+#message{
+width:50%; 
+border-radius:10px;
+
+}
