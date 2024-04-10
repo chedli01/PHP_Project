@@ -72,7 +72,7 @@ $PATH_TO_LOGIN = "../Signup/login.php";
 $PATH_TO_LOGOUT = "../Signup/logout.php";
 $PATH_TO_SIGNUP = "../Signup/signup.php";
 $PATH_TO_ABOUT = "../about.php";
-$PATH_TO_CONTACT = "#";
+$PATH_TO_CONTACT = "../contact.php";
  include "../header.php";
  ?>
 <?php 

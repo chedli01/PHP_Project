@@ -15,12 +15,12 @@
      $PATH_TO_LOGOUT = "logout.php";
      $PATH_TO_SIGNUP = "#";
      $PATH_TO_ABOUT = "../about.php";
-     $PATH_TO_CONTACT = "#";
+     $PATH_TO_CONTACT = "../contact.php";
      include '..\header.php'?>
     <section style="background-color: #B3AAFF; display: flex; justify-content: center; align-items: center;">
         <div style="display: flex; flex-direction: column; align-items: start; justify-content: center; height: 100vh; width:50%">
             <h1 style="font-size:50px;">Sign Up</h1>
-            <form class="signup-form" action="process-signup.php" method="post"  onsubmit="return validateForm(event)">
+            <form class="signup-form" action="process-signup.php" method="post" >
             <div>
                     <div class="form-element">
                         <label class="label" for="FirstName">FirstName: </label>

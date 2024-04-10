@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION["admin_id"])){
-    $mysqli=require __DIR__ . "/db_connect.php";
+    $mysqli=require "../db/db-config.php";
     $sql="SELECT * FROM admin WHERE id={$_SESSION["admin_id"]}";
     $result=$mysqli->query($sql);
     $admin=$result->fetch_assoc();}

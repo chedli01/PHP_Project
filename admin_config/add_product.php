@@ -1,3 +1,20 @@
+<?php
+session_start();
+if(isset($_SESSION["admin_id"])){
+    $mysqli=require "../db/db-config.php";
+    }
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    $productCategory=$_POST["productCategory"];
+    $productName=$_POST["productName"];
+    $productPrice=$_POST["productPrice"];
+    $productDescription=$_POST["productDescription"];
+    $quantityInStock=$_POST["quantityInStock"];
+    $sql="INSERT INTO products(productCategory,productName,productPrice,productDescription,quantityInStock) Values('$productCategory','$productName','$productPrice','$productDescription','$quantityInStock')";
+    $result=$mysqli->query($sql);
+    header("Location:myindex.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +27,7 @@
 
 <body class="editing-body">
     <h1>Add Product:</h1>
-    <form class="editing-form" method="post" novalidate onsubmit="return validateForm(event)">
+    <form class="editing-form" method="post" novalidate>
     <div>
     <div class="form-element">
         <label class="label" for="productCategory">Product Category</label>

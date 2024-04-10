@@ -1,6 +1,6 @@
 <?php
 if($_SERVER["REQUEST_METHOD"]=="POST"){
-    $mysqli=require __DIR__ . "/db_connect.php";
+    $mysqli=require "../db/db-config.php";
     $sql=sprintf("SELECT * FROM admin WHERE email='%s'",$mysqli->real_escape_string($_POST["email"]));
     $result=$mysqli->query($sql);
     $admin=$result->fetch_assoc();

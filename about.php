@@ -18,7 +18,7 @@
      $PATH_TO_LOGOUT = "./Signup/logout.php";
      $PATH_TO_SIGNUP = "./Signup/signup.php";
      $PATH_TO_ABOUT = "#";
-     $PATH_TO_CONTACT = "#";
+     $PATH_TO_CONTACT = "contact.php";
     include 'header.php'; ?>
     <section  style="display: flex; flex-direction: column ; align-items: start ; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding:30px; text-align: justify">
     <h1 style="font-size:90px ; color:white ; margin-bottom: 0px; ">About us</h1>
