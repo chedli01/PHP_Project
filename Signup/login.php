@@ -40,6 +40,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     <title>Login</title>
     <link rel="stylesheet" href="..\style.css">
     <script src="..\src\scripts\validating-form.js"></script>
+    <link rel="stylesheet" href="../src/styles/global-styles.css">
+    <link rel="stylesheet" href="../src/styles/filter-options.css">
+    <link rel="stylesheet" href="../src/styles/product-card.css">
+    <link rel="stylesheet" href="../src/styles/search.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
