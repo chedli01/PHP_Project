@@ -1,4 +1,5 @@
 <?php  
-define('USERNAME',"kousayjebir@gmail.com");
-define("PASSWORD","kjmy gkqh pcpi kany");
+define('USERNAME',"ur_email");
+define("PASSWORD","ur_password");
+/* smtp credentials */
 ?>
